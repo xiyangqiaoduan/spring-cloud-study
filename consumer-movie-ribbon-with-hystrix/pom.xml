@@ -7,10 +7,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>discovery-eureka</artifactId>
+    <artifactId>consumer-movie-ribbon-with-hystrix</artifactId>
     <packaging>jar</packaging>
 
-    <name>discovery-eureka</name>
+    <name>consumer-movie-ribbon-with-hystrix</name>
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -18,9 +18,27 @@
     </properties>
 
     <dependencies>
+
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-eureka-server</artifactId>
+            <artifactId>spring-cloud-starter-eureka</artifactId>
+        </dependency>
+
+        <!-- 整合ribbon -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-ribbon</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+        <!-- 整合hystrix -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-hystrix</artifactId>
         </dependency>
 
 

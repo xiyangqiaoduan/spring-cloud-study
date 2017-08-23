@@ -1,11 +1,19 @@
 server:
   port: 8761                    # 指定该Eureka实例的端口
-
+spring:
+  application:
+    name: eureka-server
 eureka:
   instance:
-    hostname: discovery         # 指定该Eureka实例的主机名
+    hostname: master         # 指定该Eureka实例的主机名
   client:
-    registerWithEureka: false
-    fetchRegistry: false
+    fetch-registry: false
     serviceUrl:
-      defaultZone: http://127.0.0.1:8761/eureka/
+      defaultZone: http://admin:admin@127.0.0.1:8762/eureka/ #backup地址
+    register-with-eureka: false
+security:
+  basic:
+    enabled: true
+  user:
+    name: admin
+    password: admin

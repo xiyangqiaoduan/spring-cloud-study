@@ -12,6 +12,9 @@
         <module>provider-user</module>
         <module>consumer-movie-ribbon</module>
         <module>consumer-movie-feign</module>
+        <module>consumer-movie-ribbon-with-hystrix</module>
+        <module>consumer-movie-feign-with-hystrix</module>
+        <module>discovery-eureka-backup</module>
     </modules>
     <packaging>pom</packaging>
 
